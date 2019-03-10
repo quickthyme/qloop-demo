@@ -16,15 +16,11 @@
 		DC01937622347CA500DC8E50 /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC01937522347CA500DC8E50 /* Editor.storyboard */; };
 		DC01937722347CA500DC8E50 /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC01937522347CA500DC8E50 /* Editor.storyboard */; };
 		DC0193B1223483B400DC8E50 /* libQLoop-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0193872234836000DC8E50 /* libQLoop-iOS.a */; };
-		DC0193B2223483B400DC8E50 /* libQRoute-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC01939F2234836500DC8E50 /* libQRoute-iOS.a */; };
 		DC0193B62234862300DC8E50 /* StoryboardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B42234862200DC8E50 /* StoryboardLoader.swift */; };
-		DC0193B72234862300DC8E50 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */; };
 		DC0193B82234865800DC8E50 /* StoryboardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B42234862200DC8E50 /* StoryboardLoader.swift */; };
 		DC0193BB223486B700DC8E50 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0193BA223486B700DC8E50 /* Root.storyboard */; };
 		DC0193C02234893600DC8E50 /* StubLoopSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193BF2234893600DC8E50 /* StubLoopSegment.swift */; };
 		DC0193C522348BA800DC8E50 /* libQLoop-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0193872234836000DC8E50 /* libQLoop-iOS.a */; };
-		DC0193C622348BA800DC8E50 /* libQRoute-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC01939F2234836500DC8E50 /* libQRoute-iOS.a */; };
-		DC0193C822348BE800DC8E50 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */; };
 		DC0193CB22348F0400DC8E50 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CA22348F0400DC8E50 /* MockError.swift */; };
 		DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorInjector.swift */; };
 		DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorInjector.swift */; };
@@ -32,6 +28,11 @@
 		DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */; };
 		DC0193EC2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */; };
 		DC0193ED2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */; };
+		DC4CA990223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */; };
+		DC4CA991223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */; };
+		DC4CA9972235862A00D9E9A3 /* TextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9962235862A00D9E9A3 /* TextTransformer.swift */; };
+		DC4CA9982235862A00D9E9A3 /* TextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9962235862A00D9E9A3 /* TextTransformer.swift */; };
+		DC4CA99D2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,55 +85,6 @@
 			remoteGlobalIDString = DC6FAF1F222F4241008BB070;
 			remoteInfo = "QLoop-tvOSTests";
 		};
-		DC01939E2234836500DC8E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC23AC58222A56AE00A00D40;
-			remoteInfo = "QRoute-iOS";
-		};
-		DC0193A02234836500DC8E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC70C82E222CA73B0068CCB6;
-			remoteInfo = "QRoute-macOS";
-		};
-		DC0193A22234836500DC8E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC70C874222CAA6E0068CCB6;
-			remoteInfo = "QRoute-tvOS";
-		};
-		DC0193A42234836500DC8E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC70C860222CA9D20068CCB6;
-			remoteInfo = "QRoute-watchOS";
-		};
-		DC0193A62234836500DC8E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCE8367E2221C32F00E714F8;
-			remoteInfo = "QRoute-iOSTests";
-		};
-		DC0193A82234836500DC8E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC70C844222CA8960068CCB6;
-			remoteInfo = "QRoute-macOSTests";
-		};
-		DC0193AA2234836500DC8E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC70C888222CAAD40068CCB6;
-			remoteInfo = "QRoute-tvOSTests";
-		};
 		DC0193AC223483A900DC8E50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
@@ -140,26 +92,12 @@
 			remoteGlobalIDString = DC6FAECF222F4039008BB070;
 			remoteInfo = "QLoop-iOS";
 		};
-		DC0193AE223483A900DC8E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = DC23AC57222A56AE00A00D40;
-			remoteInfo = "QRoute-iOS";
-		};
 		DC0193C122348BA100DC8E50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = DC6FAECF222F4039008BB070;
 			remoteInfo = "QLoop-iOS";
-		};
-		DC0193C322348BA100DC8E50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = DC23AC57222A56AE00A00D40;
-			remoteInfo = "QRoute-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -175,9 +113,7 @@
 		DC01937322347C4900DC8E50 /* EditorViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewControllerTests.swift; sourceTree = "<group>"; };
 		DC01937522347CA500DC8E50 /* Editor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Editor.storyboard; sourceTree = "<group>"; };
 		DC01937C2234836000DC8E50 /* QLoop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QLoop.xcodeproj; path = submodule/qloop/QLoop.xcodeproj; sourceTree = "<group>"; };
-		DC0193942234836400DC8E50 /* QRoute.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QRoute.xcodeproj; path = submodule/qroute/QRoute.xcodeproj; sourceTree = "<group>"; };
 		DC0193B42234862200DC8E50 /* StoryboardLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoader.swift; sourceTree = "<group>"; };
-		DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completion.swift"; sourceTree = "<group>"; };
 		DC0193BA223486B700DC8E50 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		DC0193BF2234893600DC8E50 /* StubLoopSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLoopSegment.swift; sourceTree = "<group>"; };
 		DC0193CA22348F0400DC8E50 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
@@ -185,6 +121,9 @@
 		DC0193D522349F9D00DC8E50 /* SpyAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAnchor.swift; sourceTree = "<group>"; };
 		DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturedCompletion.swift; sourceTree = "<group>"; };
 		DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptParser.swift; sourceTree = "<group>"; };
+		DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptTextTransformer.swift; sourceTree = "<group>"; };
+		DC4CA9962235862A00D9E9A3 /* TextTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformer.swift; sourceTree = "<group>"; };
+		DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptTextTransformTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0193B1223483B400DC8E50 /* libQLoop-iOS.a in Frameworks */,
-				DC0193B2223483B400DC8E50 /* libQRoute-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0193C522348BA800DC8E50 /* libQLoop-iOS.a in Frameworks */,
-				DC0193C622348BA800DC8E50 /* libQRoute-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,10 +171,8 @@
 			children = (
 				DC019353223478D300DC8E50 /* Info.plist */,
 				DC01934E223478D300DC8E50 /* Assets.xcassets */,
-				DC01936B22347AC800DC8E50 /* Launch.storyboard */,
-				DC019347223478D300DC8E50 /* AppDelegate.swift */,
-				DC0193BA223486B700DC8E50 /* Root.storyboard */,
-				DC01936D22347B8F00DC8E50 /* Editor */,
+				DC4CA994223583ED00D9E9A3 /* Domain */,
+				DC4CA9922235838000D9E9A3 /* Presentation */,
 				DC0193B32234860600DC8E50 /* helpers */,
 			);
 			path = "QLoop-Demo";
@@ -247,7 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				DC01935E223478D300DC8E50 /* Info.plist */,
-				DC01937222347C2900DC8E50 /* Editor */,
+				DC4CA999223586F400D9E9A3 /* Domain */,
+				DC4CA9932235838B00D9E9A3 /* Presentation */,
 				DC0193C922348D5100DC8E50 /* helpers */,
 				DC0193BE2234890600DC8E50 /* mocks */,
 			);
@@ -292,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				DC01937C2234836000DC8E50 /* QLoop.xcodeproj */,
-				DC0193942234836400DC8E50 /* QRoute.xcodeproj */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -311,20 +246,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DC0193952234836400DC8E50 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DC01939F2234836500DC8E50 /* libQRoute-iOS.a */,
-				DC0193A12234836500DC8E50 /* libQRoute-macOS.a */,
-				DC0193A32234836500DC8E50 /* libQRoute-tvOS.a */,
-				DC0193A52234836500DC8E50 /* libQRoute-watchOS.a */,
-				DC0193A72234836500DC8E50 /* QRoute-iOSTests.xctest */,
-				DC0193A92234836500DC8E50 /* QRoute-macOSTests.xctest */,
-				DC0193AB2234836500DC8E50 /* QRoute-tvOSTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		DC0193B0223483B400DC8E50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,9 +256,7 @@
 		DC0193B32234860600DC8E50 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */,
 				DC0193B42234862200DC8E50 /* StoryboardLoader.swift */,
-				DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -360,6 +279,59 @@
 			path = helpers;
 			sourceTree = "<group>";
 		};
+		DC4CA9922235838000D9E9A3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC019347223478D300DC8E50 /* AppDelegate.swift */,
+				DC01936B22347AC800DC8E50 /* Launch.storyboard */,
+				DC0193BA223486B700DC8E50 /* Root.storyboard */,
+				DC01936D22347B8F00DC8E50 /* Editor */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC4CA9932235838B00D9E9A3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC01937222347C2900DC8E50 /* Editor */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC4CA994223583ED00D9E9A3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DC4CA995223583FD00D9E9A3 /* TextTransform */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DC4CA995223583FD00D9E9A3 /* TextTransform */ = {
+			isa = PBXGroup;
+			children = (
+				DC4CA9962235862A00D9E9A3 /* TextTransformer.swift */,
+				DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */,
+				DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */,
+			);
+			path = TextTransform;
+			sourceTree = "<group>";
+		};
+		DC4CA999223586F400D9E9A3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DC4CA99A2235870300D9E9A3 /* TextTransform */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DC4CA99A2235870300D9E9A3 /* TextTransform */ = {
+			isa = PBXGroup;
+			children = (
+				DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */,
+			);
+			path = TextTransform;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,7 +347,6 @@
 			);
 			dependencies = (
 				DC0193AD223483A900DC8E50 /* PBXTargetDependency */,
-				DC0193AF223483A900DC8E50 /* PBXTargetDependency */,
 			);
 			name = "QLoop-Demo";
 			productName = "QLoop-Demo";
@@ -394,7 +365,6 @@
 			);
 			dependencies = (
 				DC0193C222348BA100DC8E50 /* PBXTargetDependency */,
-				DC0193C422348BA100DC8E50 /* PBXTargetDependency */,
 			);
 			name = "QLoop-DemoTests";
 			productName = "QLoop-DemoTests";
@@ -434,10 +404,6 @@
 				{
 					ProductGroup = DC01937D2234836000DC8E50 /* Products */;
 					ProjectRef = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
-				},
-				{
-					ProductGroup = DC0193952234836400DC8E50 /* Products */;
-					ProjectRef = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -498,55 +464,6 @@
 			remoteRef = DC0193922234836000DC8E50 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		DC01939F2234836500DC8E50 /* libQRoute-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libQRoute-iOS.a";
-			remoteRef = DC01939E2234836500DC8E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DC0193A12234836500DC8E50 /* libQRoute-macOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libQRoute-macOS.a";
-			remoteRef = DC0193A02234836500DC8E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DC0193A32234836500DC8E50 /* libQRoute-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libQRoute-tvOS.a";
-			remoteRef = DC0193A22234836500DC8E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DC0193A52234836500DC8E50 /* libQRoute-watchOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libQRoute-watchOS.a";
-			remoteRef = DC0193A42234836500DC8E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DC0193A72234836500DC8E50 /* QRoute-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "QRoute-iOSTests.xctest";
-			remoteRef = DC0193A62234836500DC8E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DC0193A92234836500DC8E50 /* QRoute-macOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "QRoute-macOSTests.xctest";
-			remoteRef = DC0193A82234836500DC8E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DC0193AB2234836500DC8E50 /* QRoute-tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "QRoute-tvOSTests.xctest";
-			remoteRef = DC0193AA2234836500DC8E50 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -578,10 +495,11 @@
 			files = (
 				DC019348223478D300DC8E50 /* AppDelegate.swift in Sources */,
 				DC0193EC2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */,
-				DC0193B72234862300DC8E50 /* UINavigationController+Completion.swift in Sources */,
+				DC4CA990223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */,
 				DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */,
 				DC01936F22347BC500DC8E50 /* EditorViewController.swift in Sources */,
 				DC0193B62234862300DC8E50 /* StoryboardLoader.swift in Sources */,
+				DC4CA9972235862A00D9E9A3 /* TextTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,11 +508,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0193ED2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */,
-				DC0193C822348BE800DC8E50 /* UINavigationController+Completion.swift in Sources */,
+				DC4CA99D2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift in Sources */,
 				DC0193D722349FAC00DC8E50 /* SpyAnchor.swift in Sources */,
 				DC01937422347C4900DC8E50 /* EditorViewControllerTests.swift in Sources */,
 				DC01937022347BC500DC8E50 /* EditorViewController.swift in Sources */,
 				DC0193B82234865800DC8E50 /* StoryboardLoader.swift in Sources */,
+				DC4CA991223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */,
+				DC4CA9982235862A00D9E9A3 /* TextTransformer.swift in Sources */,
 				DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */,
 				DC0193CB22348F0400DC8E50 /* MockError.swift in Sources */,
 				DC0193C02234893600DC8E50 /* StubLoopSegment.swift in Sources */,
@@ -610,20 +530,10 @@
 			name = "QLoop-iOS";
 			targetProxy = DC0193AC223483A900DC8E50 /* PBXContainerItemProxy */;
 		};
-		DC0193AF223483A900DC8E50 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "QRoute-iOS";
-			targetProxy = DC0193AE223483A900DC8E50 /* PBXContainerItemProxy */;
-		};
 		DC0193C222348BA100DC8E50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "QLoop-iOS";
 			targetProxy = DC0193C122348BA100DC8E50 /* PBXContainerItemProxy */;
-		};
-		DC0193C422348BA100DC8E50 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "QRoute-iOS";
-			targetProxy = DC0193C322348BA100DC8E50 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

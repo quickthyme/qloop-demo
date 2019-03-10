@@ -2,16 +2,6 @@
 import Foundation
 import JavaScriptCore
 
-typealias JavaScriptTextTransform = (((String?), (String?) -> ()) throws ->())
-
-func JavaScriptTextTransformer() -> JavaScriptTextTransform {
-    return ({ input, completion in
-        let parser = JavaScriptParser()
-        let result: String = try parser.parseString(javaScript: input ?? "")
-        completion(result)
-    })
-}
-
 class JavaScriptParser {
 
     let jsPrefix  = "var parseFunc = function(jsonData) {"
@@ -27,10 +17,10 @@ class JavaScriptParser {
         if (parseResult == "undefined") { throw ParseError(parseResult) }
         return parseResult
     }
-}
 
-struct ParseError: Error {
-    var msg: String
-    var localizedDescription: String { return msg }
-    init(_ msg: String) { self.msg = msg }
+    struct ParseError: Error {
+        var msg: String
+        var localizedDescription: String { return msg }
+        init(_ msg: String) { self.msg = msg }
+    }
 }

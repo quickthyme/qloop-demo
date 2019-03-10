@@ -7,11 +7,13 @@ class EditorInjector: NSObject {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        editorViewController.runActionLoop.bind(path: textTransformPath )
+        editorViewController
+            .runActionLoop
+            .bind(path: textTransformPath )
     }
 
     var textTransformPath: QLoopPath<String, String> {
-        return QLoopPath(QLoopLinearSegment("js parser", JavaScriptTextTransformer()))!
+        let tx = JavaScriptTextTransformer()
+        return QLoopPath(QLoopLinearSegment(tx.id, tx.op))!
     }
 }

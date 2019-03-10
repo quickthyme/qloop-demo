@@ -14,7 +14,7 @@ class EditorViewControllerTests: XCTestCase {
     func test_has_correct_runActionLoop_configuration() {
         let subject: EditorViewController = (StoryboardLoader.loadViewController(from: "Editor") as! EditorViewController)
         let _ = subject.view
-        XCTAssertEqual(subject.runActionLoop.outputAnchor.backwardOwner?.operationIds, ["js parser"])
+        XCTAssertEqual(subject.runActionLoop.findSegments(with: "js parser").count, 1)
     }
 
     func test_outlets_connected() {
