@@ -16,7 +16,6 @@
 		DC01937622347CA500DC8E50 /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC01937522347CA500DC8E50 /* Editor.storyboard */; };
 		DC01937722347CA500DC8E50 /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC01937522347CA500DC8E50 /* Editor.storyboard */; };
 		DC0193B1223483B400DC8E50 /* libQLoop-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0193872234836000DC8E50 /* libQLoop-iOS.a */; };
-		DC0193B62234862300DC8E50 /* StoryboardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B42234862200DC8E50 /* StoryboardLoader.swift */; };
 		DC0193B82234865800DC8E50 /* StoryboardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B42234862200DC8E50 /* StoryboardLoader.swift */; };
 		DC0193BB223486B700DC8E50 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0193BA223486B700DC8E50 /* Root.storyboard */; };
 		DC0193C02234893600DC8E50 /* StubLoopSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193BF2234893600DC8E50 /* StubLoopSegment.swift */; };
@@ -30,9 +29,11 @@
 		DC0193ED2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */; };
 		DC4CA990223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */; };
 		DC4CA991223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */; };
-		DC4CA9972235862A00D9E9A3 /* TextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9962235862A00D9E9A3 /* TextTransformer.swift */; };
-		DC4CA9982235862A00D9E9A3 /* TextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9962235862A00D9E9A3 /* TextTransformer.swift */; };
 		DC4CA99D2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */; };
+		DC4CA9A72235BEC400D9E9A3 /* ThreadOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */; };
+		DC4CA9AF2235D0D200D9E9A3 /* ThreadOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */; };
+		DCAF2F882235D89900FE2BDB /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF2F872235D86000FE2BDB /* AppDelegateTests.swift */; };
+		DCAF2F892235D89F00FE2BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC019347223478D300DC8E50 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,8 +123,9 @@
 		DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturedCompletion.swift; sourceTree = "<group>"; };
 		DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptParser.swift; sourceTree = "<group>"; };
 		DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptTextTransformer.swift; sourceTree = "<group>"; };
-		DC4CA9962235862A00D9E9A3 /* TextTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransformer.swift; sourceTree = "<group>"; };
 		DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptTextTransformTests.swift; sourceTree = "<group>"; };
+		DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadOperations.swift; sourceTree = "<group>"; };
+		DCAF2F872235D86000FE2BDB /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0193B42234862200DC8E50 /* StoryboardLoader.swift */,
+				DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 		DC4CA9932235838B00D9E9A3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DCAF2F872235D86000FE2BDB /* AppDelegateTests.swift */,
 				DC01937222347C2900DC8E50 /* Editor */,
 			);
 			path = Presentation;
@@ -309,7 +313,6 @@
 		DC4CA995223583FD00D9E9A3 /* TextTransform */ = {
 			isa = PBXGroup;
 			children = (
-				DC4CA9962235862A00D9E9A3 /* TextTransformer.swift */,
 				DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */,
 				DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */,
 			);
@@ -498,8 +501,7 @@
 				DC4CA990223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */,
 				DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */,
 				DC01936F22347BC500DC8E50 /* EditorViewController.swift in Sources */,
-				DC0193B62234862300DC8E50 /* StoryboardLoader.swift in Sources */,
-				DC4CA9972235862A00D9E9A3 /* TextTransformer.swift in Sources */,
+				DC4CA9A72235BEC400D9E9A3 /* ThreadOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,14 +513,16 @@
 				DC4CA99D2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift in Sources */,
 				DC0193D722349FAC00DC8E50 /* SpyAnchor.swift in Sources */,
 				DC01937422347C4900DC8E50 /* EditorViewControllerTests.swift in Sources */,
+				DCAF2F892235D89F00FE2BDB /* AppDelegate.swift in Sources */,
 				DC01937022347BC500DC8E50 /* EditorViewController.swift in Sources */,
 				DC0193B82234865800DC8E50 /* StoryboardLoader.swift in Sources */,
 				DC4CA991223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */,
-				DC4CA9982235862A00D9E9A3 /* TextTransformer.swift in Sources */,
 				DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */,
 				DC0193CB22348F0400DC8E50 /* MockError.swift in Sources */,
 				DC0193C02234893600DC8E50 /* StubLoopSegment.swift in Sources */,
+				DC4CA9AF2235D0D200D9E9A3 /* ThreadOperations.swift in Sources */,
 				DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */,
+				DCAF2F882235D89900FE2BDB /* AppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

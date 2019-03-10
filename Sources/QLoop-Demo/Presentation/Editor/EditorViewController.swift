@@ -14,10 +14,12 @@ class EditorViewController: UIViewController {
 
     lazy var runActionLoop = QLoop<String, String>(
         iterator: QLoopIteratorSingle(),
+
         onChange: ({ text in
             self.outputTextView.textColor = UIColor.white
             self.outputTextView.text = text
         }),
+
         onError: ({ error in
             self.outputTextView.textColor = UIColor.red
             self.outputTextView.text = "\(error)"
