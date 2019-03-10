@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vz8-ix-iyL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Editor-->
+        <scene sceneID="aR8-FI-waQ">
+            <objects>
+                <viewController storyboardIdentifier="EditorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vz8-ix-iyL" userLabel="Editor" customClass="EditorViewController" customModule="QLoop_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8lh-XT-dvD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vqg-ae-00e">
+                                <rect key="frame" x="0.0" y="64" width="375" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Try Me" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1mQ-MH-L3h">
+                                <rect key="frame" x="0.0" y="475" width="375" height="192"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="N7D-SK-VIJ"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nG-KL-gWV">
+                                <rect key="frame" x="189" y="425" width="170" height="44"/>
+                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FbW-rH-1xJ"/>
+                                    <constraint firstAttribute="width" constant="170" id="d6r-xc-zZp"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Run">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="runAction:" destination="Vz8-ix-iyL" eventType="touchUpInside" id="mm5-dN-K06"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vqg-ae-00e" firstAttribute="top" secondItem="URU-7T-xif" secondAttribute="top" id="508-mh-AL6"/>
+                            <constraint firstItem="URU-7T-xif" firstAttribute="trailing" secondItem="8nG-KL-gWV" secondAttribute="trailing" constant="16" id="AKT-y1-o9g"/>
+                            <constraint firstItem="8nG-KL-gWV" firstAttribute="top" secondItem="vqg-ae-00e" secondAttribute="bottom" constant="6" id="Hqb-Ku-r0W"/>
+                            <constraint firstItem="1mQ-MH-L3h" firstAttribute="top" secondItem="8nG-KL-gWV" secondAttribute="bottom" constant="6" id="Q2Z-OM-1Cl"/>
+                            <constraint firstItem="URU-7T-xif" firstAttribute="trailing" secondItem="1mQ-MH-L3h" secondAttribute="trailing" id="XII-Wh-ruJ"/>
+                            <constraint firstItem="URU-7T-xif" firstAttribute="trailing" secondItem="vqg-ae-00e" secondAttribute="trailing" id="gJh-Zp-PSW"/>
+                            <constraint firstItem="vqg-ae-00e" firstAttribute="leading" secondItem="URU-7T-xif" secondAttribute="leading" id="irH-cd-VML"/>
+                            <constraint firstItem="1mQ-MH-L3h" firstAttribute="leading" secondItem="URU-7T-xif" secondAttribute="leading" id="oNC-mO-LvR"/>
+                            <constraint firstItem="8nG-KL-gWV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="URU-7T-xif" secondAttribute="leading" constant="16" id="wX4-1W-ZnG"/>
+                            <constraint firstItem="URU-7T-xif" firstAttribute="bottom" secondItem="1mQ-MH-L3h" secondAttribute="bottom" id="xVd-XE-U5O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="URU-7T-xif"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Editor" leftItemsSupplementBackButton="YES" id="gxV-lc-eRi"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="inputTextView" destination="vqg-ae-00e" id="Uyj-oc-xRI"/>
+                        <outlet property="outputTextView" destination="1mQ-MH-L3h" id="lLy-pZ-b9B"/>
+                        <outlet property="runButton" destination="8nG-KL-gWV" id="t5J-40-ga8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJt-UH-FwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="NRd-RW-cJN" userLabel="Injector" customClass="EditorInjector" customModule="QLoop_Demo" customModuleProvider="target">
+                    <connections>
+                        <outlet property="editorViewController" destination="Vz8-ix-iyL" id="m24-Ih-65l"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="137" y="152"/>
+        </scene>
+    </scenes>
+</document>

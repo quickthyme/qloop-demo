@@ -1,0 +1,882 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC019348223478D300DC8E50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC019347223478D300DC8E50 /* AppDelegate.swift */; };
+		DC01934F223478D300DC8E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC01934E223478D300DC8E50 /* Assets.xcassets */; };
+		DC01936C22347AC800DC8E50 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC01936B22347AC800DC8E50 /* Launch.storyboard */; };
+		DC01936F22347BC500DC8E50 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC01936E22347BC500DC8E50 /* EditorViewController.swift */; };
+		DC01937022347BC500DC8E50 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC01936E22347BC500DC8E50 /* EditorViewController.swift */; };
+		DC01937422347C4900DC8E50 /* EditorViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC01937322347C4900DC8E50 /* EditorViewControllerTests.swift */; };
+		DC01937622347CA500DC8E50 /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC01937522347CA500DC8E50 /* Editor.storyboard */; };
+		DC01937722347CA500DC8E50 /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC01937522347CA500DC8E50 /* Editor.storyboard */; };
+		DC0193B1223483B400DC8E50 /* libQLoop-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0193872234836000DC8E50 /* libQLoop-iOS.a */; };
+		DC0193B2223483B400DC8E50 /* libQRoute-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC01939F2234836500DC8E50 /* libQRoute-iOS.a */; };
+		DC0193B62234862300DC8E50 /* StoryboardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B42234862200DC8E50 /* StoryboardLoader.swift */; };
+		DC0193B72234862300DC8E50 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */; };
+		DC0193B82234865800DC8E50 /* StoryboardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B42234862200DC8E50 /* StoryboardLoader.swift */; };
+		DC0193BB223486B700DC8E50 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0193BA223486B700DC8E50 /* Root.storyboard */; };
+		DC0193C02234893600DC8E50 /* StubLoopSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193BF2234893600DC8E50 /* StubLoopSegment.swift */; };
+		DC0193C522348BA800DC8E50 /* libQLoop-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0193872234836000DC8E50 /* libQLoop-iOS.a */; };
+		DC0193C622348BA800DC8E50 /* libQRoute-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC01939F2234836500DC8E50 /* libQRoute-iOS.a */; };
+		DC0193C822348BE800DC8E50 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */; };
+		DC0193CB22348F0400DC8E50 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CA22348F0400DC8E50 /* MockError.swift */; };
+		DC0193CD2234901600DC8E50 /* EditorTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CC2234901600DC8E50 /* EditorTextTransformer.swift */; };
+		DC0193CE223490E300DC8E50 /* EditorTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CC2234901600DC8E50 /* EditorTextTransformer.swift */; };
+		DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorInjector.swift */; };
+		DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorInjector.swift */; };
+		DC0193D722349FAC00DC8E50 /* SpyAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193D522349F9D00DC8E50 /* SpyAnchor.swift */; };
+		DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC0193862234836000DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC6FAED0222F4039008BB070;
+			remoteInfo = "QLoop-iOS";
+		};
+		DC0193882234836000DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC6FAEDE222F4130008BB070;
+			remoteInfo = "QLoop-macOS";
+		};
+		DC01938A2234836000DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC6FAEEB222F4164008BB070;
+			remoteInfo = "QLoop-tvOS";
+		};
+		DC01938C2234836000DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC6FAEF6222F41AA008BB070;
+			remoteInfo = "QLoop-watchOS";
+		};
+		DC01938E2234836000DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC6FAF01222F41DD008BB070;
+			remoteInfo = "QLoop-iOSTests";
+		};
+		DC0193902234836000DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC6FAF10222F4231008BB070;
+			remoteInfo = "QLoop-macOSTests";
+		};
+		DC0193922234836000DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC6FAF1F222F4241008BB070;
+			remoteInfo = "QLoop-tvOSTests";
+		};
+		DC01939E2234836500DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC23AC58222A56AE00A00D40;
+			remoteInfo = "QRoute-iOS";
+		};
+		DC0193A02234836500DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC70C82E222CA73B0068CCB6;
+			remoteInfo = "QRoute-macOS";
+		};
+		DC0193A22234836500DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC70C874222CAA6E0068CCB6;
+			remoteInfo = "QRoute-tvOS";
+		};
+		DC0193A42234836500DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC70C860222CA9D20068CCB6;
+			remoteInfo = "QRoute-watchOS";
+		};
+		DC0193A62234836500DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCE8367E2221C32F00E714F8;
+			remoteInfo = "QRoute-iOSTests";
+		};
+		DC0193A82234836500DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC70C844222CA8960068CCB6;
+			remoteInfo = "QRoute-macOSTests";
+		};
+		DC0193AA2234836500DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC70C888222CAAD40068CCB6;
+			remoteInfo = "QRoute-tvOSTests";
+		};
+		DC0193AC223483A900DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC6FAECF222F4039008BB070;
+			remoteInfo = "QLoop-iOS";
+		};
+		DC0193AE223483A900DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC23AC57222A56AE00A00D40;
+			remoteInfo = "QRoute-iOS";
+		};
+		DC0193C122348BA100DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC6FAECF222F4039008BB070;
+			remoteInfo = "QLoop-iOS";
+		};
+		DC0193C322348BA100DC8E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC23AC57222A56AE00A00D40;
+			remoteInfo = "QRoute-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC019344223478D200DC8E50 /* QLoop-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QLoop-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC019347223478D300DC8E50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC01934E223478D300DC8E50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC019353223478D300DC8E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC019358223478D300DC8E50 /* QLoop-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QLoop-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC01935E223478D300DC8E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC01936B22347AC800DC8E50 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		DC01936E22347BC500DC8E50 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		DC01937322347C4900DC8E50 /* EditorViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewControllerTests.swift; sourceTree = "<group>"; };
+		DC01937522347CA500DC8E50 /* Editor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Editor.storyboard; sourceTree = "<group>"; };
+		DC01937C2234836000DC8E50 /* QLoop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QLoop.xcodeproj; path = submodule/qloop/QLoop.xcodeproj; sourceTree = "<group>"; };
+		DC0193942234836400DC8E50 /* QRoute.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QRoute.xcodeproj; path = submodule/qroute/QRoute.xcodeproj; sourceTree = "<group>"; };
+		DC0193B42234862200DC8E50 /* StoryboardLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoader.swift; sourceTree = "<group>"; };
+		DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completion.swift"; sourceTree = "<group>"; };
+		DC0193BA223486B700DC8E50 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		DC0193BF2234893600DC8E50 /* StubLoopSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLoopSegment.swift; sourceTree = "<group>"; };
+		DC0193CA22348F0400DC8E50 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
+		DC0193CC2234901600DC8E50 /* EditorTextTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTextTransformer.swift; sourceTree = "<group>"; };
+		DC0193CF2234921B00DC8E50 /* EditorInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorInjector.swift; sourceTree = "<group>"; };
+		DC0193D522349F9D00DC8E50 /* SpyAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAnchor.swift; sourceTree = "<group>"; };
+		DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturedCompletion.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC019341223478D200DC8E50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0193B1223483B400DC8E50 /* libQLoop-iOS.a in Frameworks */,
+				DC0193B2223483B400DC8E50 /* libQRoute-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC019355223478D300DC8E50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0193C522348BA800DC8E50 /* libQLoop-iOS.a in Frameworks */,
+				DC0193C622348BA800DC8E50 /* libQRoute-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC01933B223478D200DC8E50 = {
+			isa = PBXGroup;
+			children = (
+				DC019367223478F100DC8E50 /* Sources */,
+				DC019368223478F700DC8E50 /* Tests */,
+				DC01937B2234832D00DC8E50 /* Dependencies */,
+				DC019345223478D200DC8E50 /* Products */,
+				DC0193B0223483B400DC8E50 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DC019345223478D200DC8E50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC019344223478D200DC8E50 /* QLoop-Demo.app */,
+				DC019358223478D300DC8E50 /* QLoop-DemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC019346223478D200DC8E50 /* QLoop-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DC019353223478D300DC8E50 /* Info.plist */,
+				DC01934E223478D300DC8E50 /* Assets.xcassets */,
+				DC01936B22347AC800DC8E50 /* Launch.storyboard */,
+				DC019347223478D300DC8E50 /* AppDelegate.swift */,
+				DC01936A22347A1400DC8E50 /* Domain */,
+				DC019369223479F500DC8E50 /* Presentation */,
+				DC0193B32234860600DC8E50 /* helpers */,
+			);
+			path = "QLoop-Demo";
+			sourceTree = "<group>";
+		};
+		DC01935B223478D300DC8E50 /* QLoop-DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC01935E223478D300DC8E50 /* Info.plist */,
+				DC01937122347C2100DC8E50 /* Presentation */,
+				DC0193C922348D5100DC8E50 /* helpers */,
+				DC0193BE2234890600DC8E50 /* mocks */,
+			);
+			path = "QLoop-DemoTests";
+			sourceTree = "<group>";
+		};
+		DC019367223478F100DC8E50 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DC019346223478D200DC8E50 /* QLoop-Demo */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DC019368223478F700DC8E50 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DC01935B223478D300DC8E50 /* QLoop-DemoTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DC019369223479F500DC8E50 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC0193B9223486AB00DC8E50 /* Root */,
+				DC01936D22347B8F00DC8E50 /* Editor */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC01936A22347A1400DC8E50 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DC01936D22347B8F00DC8E50 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				DC01937522347CA500DC8E50 /* Editor.storyboard */,
+				DC0193CF2234921B00DC8E50 /* EditorInjector.swift */,
+				DC01936E22347BC500DC8E50 /* EditorViewController.swift */,
+				DC0193CC2234901600DC8E50 /* EditorTextTransformer.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		DC01937122347C2100DC8E50 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC01937222347C2900DC8E50 /* Editor */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC01937222347C2900DC8E50 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				DC01937322347C4900DC8E50 /* EditorViewControllerTests.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		DC01937B2234832D00DC8E50 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				DC01937C2234836000DC8E50 /* QLoop.xcodeproj */,
+				DC0193942234836400DC8E50 /* QRoute.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		DC01937D2234836000DC8E50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC0193872234836000DC8E50 /* libQLoop-iOS.a */,
+				DC0193892234836000DC8E50 /* libQLoop-macOS.a */,
+				DC01938B2234836000DC8E50 /* libQLoop-tvOS.a */,
+				DC01938D2234836000DC8E50 /* libQLoop-watchOS.a */,
+				DC01938F2234836000DC8E50 /* QLoop-iOSTests.xctest */,
+				DC0193912234836000DC8E50 /* QLoop-macOSTests.xctest */,
+				DC0193932234836000DC8E50 /* QLoop-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC0193952234836400DC8E50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC01939F2234836500DC8E50 /* libQRoute-iOS.a */,
+				DC0193A12234836500DC8E50 /* libQRoute-macOS.a */,
+				DC0193A32234836500DC8E50 /* libQRoute-tvOS.a */,
+				DC0193A52234836500DC8E50 /* libQRoute-watchOS.a */,
+				DC0193A72234836500DC8E50 /* QRoute-iOSTests.xctest */,
+				DC0193A92234836500DC8E50 /* QRoute-macOSTests.xctest */,
+				DC0193AB2234836500DC8E50 /* QRoute-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC0193B0223483B400DC8E50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC0193B32234860600DC8E50 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DC0193B42234862200DC8E50 /* StoryboardLoader.swift */,
+				DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		DC0193B9223486AB00DC8E50 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DC0193BA223486B700DC8E50 /* Root.storyboard */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DC0193BE2234890600DC8E50 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DC0193CA22348F0400DC8E50 /* MockError.swift */,
+				DC0193BF2234893600DC8E50 /* StubLoopSegment.swift */,
+				DC0193D522349F9D00DC8E50 /* SpyAnchor.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		DC0193C922348D5100DC8E50 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC019343223478D200DC8E50 /* QLoop-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC019361223478D300DC8E50 /* Build configuration list for PBXNativeTarget "QLoop-Demo" */;
+			buildPhases = (
+				DC019340223478D200DC8E50 /* Sources */,
+				DC019341223478D200DC8E50 /* Frameworks */,
+				DC019342223478D200DC8E50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC0193AD223483A900DC8E50 /* PBXTargetDependency */,
+				DC0193AF223483A900DC8E50 /* PBXTargetDependency */,
+			);
+			name = "QLoop-Demo";
+			productName = "QLoop-Demo";
+			productReference = DC019344223478D200DC8E50 /* QLoop-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC019357223478D300DC8E50 /* QLoop-DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC019364223478D300DC8E50 /* Build configuration list for PBXNativeTarget "QLoop-DemoTests" */;
+			buildPhases = (
+				DC019354223478D300DC8E50 /* Sources */,
+				DC019355223478D300DC8E50 /* Frameworks */,
+				DC019356223478D300DC8E50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC0193C222348BA100DC8E50 /* PBXTargetDependency */,
+				DC0193C422348BA100DC8E50 /* PBXTargetDependency */,
+			);
+			name = "QLoop-DemoTests";
+			productName = "QLoop-DemoTests";
+			productReference = DC019358223478D300DC8E50 /* QLoop-DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC01933C223478D200DC8E50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Quickthyme;
+				TargetAttributes = {
+					DC019343223478D200DC8E50 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					DC019357223478D300DC8E50 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = DC01933F223478D200DC8E50 /* Build configuration list for PBXProject "QLoop-Demo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC01933B223478D200DC8E50;
+			productRefGroup = DC019345223478D200DC8E50 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DC01937D2234836000DC8E50 /* Products */;
+					ProjectRef = DC01937C2234836000DC8E50 /* QLoop.xcodeproj */;
+				},
+				{
+					ProductGroup = DC0193952234836400DC8E50 /* Products */;
+					ProjectRef = DC0193942234836400DC8E50 /* QRoute.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DC019343223478D200DC8E50 /* QLoop-Demo */,
+				DC019357223478D300DC8E50 /* QLoop-DemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DC0193872234836000DC8E50 /* libQLoop-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libQLoop-iOS.a";
+			remoteRef = DC0193862234836000DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC0193892234836000DC8E50 /* libQLoop-macOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libQLoop-macOS.a";
+			remoteRef = DC0193882234836000DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC01938B2234836000DC8E50 /* libQLoop-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libQLoop-tvOS.a";
+			remoteRef = DC01938A2234836000DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC01938D2234836000DC8E50 /* libQLoop-watchOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libQLoop-watchOS.a";
+			remoteRef = DC01938C2234836000DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC01938F2234836000DC8E50 /* QLoop-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QLoop-iOSTests.xctest";
+			remoteRef = DC01938E2234836000DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC0193912234836000DC8E50 /* QLoop-macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QLoop-macOSTests.xctest";
+			remoteRef = DC0193902234836000DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC0193932234836000DC8E50 /* QLoop-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QLoop-tvOSTests.xctest";
+			remoteRef = DC0193922234836000DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC01939F2234836500DC8E50 /* libQRoute-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libQRoute-iOS.a";
+			remoteRef = DC01939E2234836500DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC0193A12234836500DC8E50 /* libQRoute-macOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libQRoute-macOS.a";
+			remoteRef = DC0193A02234836500DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC0193A32234836500DC8E50 /* libQRoute-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libQRoute-tvOS.a";
+			remoteRef = DC0193A22234836500DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC0193A52234836500DC8E50 /* libQRoute-watchOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libQRoute-watchOS.a";
+			remoteRef = DC0193A42234836500DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC0193A72234836500DC8E50 /* QRoute-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QRoute-iOSTests.xctest";
+			remoteRef = DC0193A62234836500DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC0193A92234836500DC8E50 /* QRoute-macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QRoute-macOSTests.xctest";
+			remoteRef = DC0193A82234836500DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC0193AB2234836500DC8E50 /* QRoute-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QRoute-tvOSTests.xctest";
+			remoteRef = DC0193AA2234836500DC8E50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC019342223478D200DC8E50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC01934F223478D300DC8E50 /* Assets.xcassets in Resources */,
+				DC01937622347CA500DC8E50 /* Editor.storyboard in Resources */,
+				DC0193BB223486B700DC8E50 /* Root.storyboard in Resources */,
+				DC01936C22347AC800DC8E50 /* Launch.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC019356223478D300DC8E50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC01937722347CA500DC8E50 /* Editor.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC019340223478D200DC8E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC019348223478D300DC8E50 /* AppDelegate.swift in Sources */,
+				DC0193B72234862300DC8E50 /* UINavigationController+Completion.swift in Sources */,
+				DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */,
+				DC01936F22347BC500DC8E50 /* EditorViewController.swift in Sources */,
+				DC0193CE223490E300DC8E50 /* EditorTextTransformer.swift in Sources */,
+				DC0193B62234862300DC8E50 /* StoryboardLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC019354223478D300DC8E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0193C822348BE800DC8E50 /* UINavigationController+Completion.swift in Sources */,
+				DC0193D722349FAC00DC8E50 /* SpyAnchor.swift in Sources */,
+				DC01937422347C4900DC8E50 /* EditorViewControllerTests.swift in Sources */,
+				DC01937022347BC500DC8E50 /* EditorViewController.swift in Sources */,
+				DC0193B82234865800DC8E50 /* StoryboardLoader.swift in Sources */,
+				DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */,
+				DC0193CB22348F0400DC8E50 /* MockError.swift in Sources */,
+				DC0193CD2234901600DC8E50 /* EditorTextTransformer.swift in Sources */,
+				DC0193C02234893600DC8E50 /* StubLoopSegment.swift in Sources */,
+				DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC0193AD223483A900DC8E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "QLoop-iOS";
+			targetProxy = DC0193AC223483A900DC8E50 /* PBXContainerItemProxy */;
+		};
+		DC0193AF223483A900DC8E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "QRoute-iOS";
+			targetProxy = DC0193AE223483A900DC8E50 /* PBXContainerItemProxy */;
+		};
+		DC0193C222348BA100DC8E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "QLoop-iOS";
+			targetProxy = DC0193C122348BA100DC8E50 /* PBXContainerItemProxy */;
+		};
+		DC0193C422348BA100DC8E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "QRoute-iOS";
+			targetProxy = DC0193C322348BA100DC8E50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DC01935F223478D300DC8E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC019360223478D300DC8E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC019362223478D300DC8E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Sources/QLoop-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.quickthyme.QLoop-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DC019363223478D300DC8E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Sources/QLoop-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.quickthyme.QLoop-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DC019365223478D300DC8E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests/QLoop-DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.quickthyme.QLoop-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC019366223478D300DC8E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests/QLoop-DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.quickthyme.QLoop-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC01933F223478D200DC8E50 /* Build configuration list for PBXProject "QLoop-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC01935F223478D300DC8E50 /* Debug */,
+				DC019360223478D300DC8E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC019361223478D300DC8E50 /* Build configuration list for PBXNativeTarget "QLoop-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC019362223478D300DC8E50 /* Debug */,
+				DC019363223478D300DC8E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC019364223478D300DC8E50 /* Build configuration list for PBXNativeTarget "QLoop-DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC019365223478D300DC8E50 /* Debug */,
+				DC019366223478D300DC8E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC01933C223478D200DC8E50 /* Project object */;
+}

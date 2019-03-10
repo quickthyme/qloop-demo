@@ -1,0 +1,6 @@
+[submodule "submodule/qloop"]
+	path = submodule/qloop
+	url = https://github.com/quickthyme/qloop.git
+[submodule "submodule/qroute"]
+	path = submodule/qroute
+	url = https://github.com/quickthyme/qroute.git

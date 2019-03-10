@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode10.1
+xcode_project: QLoop-Demo.xcodeproj
+xcode_scheme: QLoop-Demo
+xcode_destination: platform=iOS Simulator,name=iPhone X
