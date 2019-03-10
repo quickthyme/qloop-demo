@@ -26,12 +26,12 @@
 		DC0193C622348BA800DC8E50 /* libQRoute-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC01939F2234836500DC8E50 /* libQRoute-iOS.a */; };
 		DC0193C822348BE800DC8E50 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */; };
 		DC0193CB22348F0400DC8E50 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CA22348F0400DC8E50 /* MockError.swift */; };
-		DC0193CD2234901600DC8E50 /* EditorTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CC2234901600DC8E50 /* EditorTextTransformer.swift */; };
-		DC0193CE223490E300DC8E50 /* EditorTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CC2234901600DC8E50 /* EditorTextTransformer.swift */; };
 		DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorInjector.swift */; };
 		DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorInjector.swift */; };
 		DC0193D722349FAC00DC8E50 /* SpyAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193D522349F9D00DC8E50 /* SpyAnchor.swift */; };
 		DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */; };
+		DC0193EC2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */; };
+		DC0193ED2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,10 +181,10 @@
 		DC0193BA223486B700DC8E50 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		DC0193BF2234893600DC8E50 /* StubLoopSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLoopSegment.swift; sourceTree = "<group>"; };
 		DC0193CA22348F0400DC8E50 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
-		DC0193CC2234901600DC8E50 /* EditorTextTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTextTransformer.swift; sourceTree = "<group>"; };
 		DC0193CF2234921B00DC8E50 /* EditorInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorInjector.swift; sourceTree = "<group>"; };
 		DC0193D522349F9D00DC8E50 /* SpyAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAnchor.swift; sourceTree = "<group>"; };
 		DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturedCompletion.swift; sourceTree = "<group>"; };
+		DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,8 +236,8 @@
 				DC01934E223478D300DC8E50 /* Assets.xcassets */,
 				DC01936B22347AC800DC8E50 /* Launch.storyboard */,
 				DC019347223478D300DC8E50 /* AppDelegate.swift */,
-				DC01936A22347A1400DC8E50 /* Domain */,
-				DC019369223479F500DC8E50 /* Presentation */,
+				DC0193BA223486B700DC8E50 /* Root.storyboard */,
+				DC01936D22347B8F00DC8E50 /* Editor */,
 				DC0193B32234860600DC8E50 /* helpers */,
 			);
 			path = "QLoop-Demo";
@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				DC01935E223478D300DC8E50 /* Info.plist */,
-				DC01937122347C2100DC8E50 /* Presentation */,
+				DC01937222347C2900DC8E50 /* Editor */,
 				DC0193C922348D5100DC8E50 /* helpers */,
 				DC0193BE2234890600DC8E50 /* mocks */,
 			);
@@ -270,39 +270,14 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		DC019369223479F500DC8E50 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				DC0193B9223486AB00DC8E50 /* Root */,
-				DC01936D22347B8F00DC8E50 /* Editor */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		DC01936A22347A1400DC8E50 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		DC01936D22347B8F00DC8E50 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
 				DC01937522347CA500DC8E50 /* Editor.storyboard */,
 				DC0193CF2234921B00DC8E50 /* EditorInjector.swift */,
 				DC01936E22347BC500DC8E50 /* EditorViewController.swift */,
-				DC0193CC2234901600DC8E50 /* EditorTextTransformer.swift */,
 			);
 			path = Editor;
-			sourceTree = "<group>";
-		};
-		DC01937122347C2100DC8E50 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				DC01937222347C2900DC8E50 /* Editor */,
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		DC01937222347C2900DC8E50 /* Editor */ = {
@@ -360,18 +335,11 @@
 		DC0193B32234860600DC8E50 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */,
 				DC0193B42234862200DC8E50 /* StoryboardLoader.swift */,
 				DC0193B52234862300DC8E50 /* UINavigationController+Completion.swift */,
 			);
 			path = helpers;
-			sourceTree = "<group>";
-		};
-		DC0193B9223486AB00DC8E50 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				DC0193BA223486B700DC8E50 /* Root.storyboard */,
-			);
-			path = Root;
 			sourceTree = "<group>";
 		};
 		DC0193BE2234890600DC8E50 /* mocks */ = {
@@ -609,10 +577,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC019348223478D300DC8E50 /* AppDelegate.swift in Sources */,
+				DC0193EC2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */,
 				DC0193B72234862300DC8E50 /* UINavigationController+Completion.swift in Sources */,
 				DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */,
 				DC01936F22347BC500DC8E50 /* EditorViewController.swift in Sources */,
-				DC0193CE223490E300DC8E50 /* EditorTextTransformer.swift in Sources */,
 				DC0193B62234862300DC8E50 /* StoryboardLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0193ED2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */,
 				DC0193C822348BE800DC8E50 /* UINavigationController+Completion.swift in Sources */,
 				DC0193D722349FAC00DC8E50 /* SpyAnchor.swift in Sources */,
 				DC01937422347C4900DC8E50 /* EditorViewControllerTests.swift in Sources */,
@@ -628,7 +597,6 @@
 				DC0193B82234865800DC8E50 /* StoryboardLoader.swift in Sources */,
 				DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */,
 				DC0193CB22348F0400DC8E50 /* MockError.swift in Sources */,
-				DC0193CD2234901600DC8E50 /* EditorTextTransformer.swift in Sources */,
 				DC0193C02234893600DC8E50 /* StubLoopSegment.swift in Sources */,
 				DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */,
 			);

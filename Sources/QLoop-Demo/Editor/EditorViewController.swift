@@ -20,6 +20,6 @@ class EditorViewController: UIViewController {
         }),
         onError: ({ error in
             self.outputTextView.textColor = UIColor.red
-            self.outputTextView.text = "ERROR: \(error)"
+            self.outputTextView.text = "\(error)"
         }))
 }
