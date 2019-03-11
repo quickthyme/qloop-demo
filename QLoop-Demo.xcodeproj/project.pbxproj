@@ -30,8 +30,12 @@
 		DC4CA990223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */; };
 		DC4CA991223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */; };
 		DC4CA99D2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */; };
-		DC4CA9A72235BEC400D9E9A3 /* ThreadOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */; };
-		DC4CA9AF2235D0D200D9E9A3 /* ThreadOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */; };
+		DC4CA9A72235BEC400D9E9A3 /* MainThreadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9A62235BEC400D9E9A3 /* MainThreadOperation.swift */; };
+		DC4CA9AF2235D0D200D9E9A3 /* MainThreadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9A62235BEC400D9E9A3 /* MainThreadOperation.swift */; };
+		DCAD923B223614F800EC1B01 /* MainThreadOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAD923A223614F800EC1B01 /* MainThreadOperationTests.swift */; };
+		DCAD92452236189500EC1B01 /* GlobalThreadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAD92442236189500EC1B01 /* GlobalThreadOperation.swift */; };
+		DCAD92462236189500EC1B01 /* GlobalThreadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAD92442236189500EC1B01 /* GlobalThreadOperation.swift */; };
+		DCAD9248223618D600EC1B01 /* GlobalThreadOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAD9247223618D600EC1B01 /* GlobalThreadOperationTests.swift */; };
 		DCAF2F882235D89900FE2BDB /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF2F872235D86000FE2BDB /* AppDelegateTests.swift */; };
 		DCAF2F892235D89F00FE2BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC019347223478D300DC8E50 /* AppDelegate.swift */; };
 		DCAF2F942235DD5800FE2BDB /* GuardNumberText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF2F932235DD5800FE2BDB /* GuardNumberText.swift */; };
@@ -129,7 +133,10 @@
 		DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptParser.swift; sourceTree = "<group>"; };
 		DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptTextTransformer.swift; sourceTree = "<group>"; };
 		DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptTextTransformTests.swift; sourceTree = "<group>"; };
-		DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadOperations.swift; sourceTree = "<group>"; };
+		DC4CA9A62235BEC400D9E9A3 /* MainThreadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadOperation.swift; sourceTree = "<group>"; };
+		DCAD923A223614F800EC1B01 /* MainThreadOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadOperationTests.swift; sourceTree = "<group>"; };
+		DCAD92442236189500EC1B01 /* GlobalThreadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalThreadOperation.swift; sourceTree = "<group>"; };
+		DCAD9247223618D600EC1B01 /* GlobalThreadOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalThreadOperationTests.swift; sourceTree = "<group>"; };
 		DCAF2F872235D86000FE2BDB /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		DCAF2F932235DD5800FE2BDB /* GuardNumberText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardNumberText.swift; sourceTree = "<group>"; };
 		DCAF2F952235DD9700FE2BDB /* TextTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransform.swift; sourceTree = "<group>"; };
@@ -194,6 +201,7 @@
 				DC01935E223478D300DC8E50 /* Info.plist */,
 				DC4CA999223586F400D9E9A3 /* Domain */,
 				DC4CA9932235838B00D9E9A3 /* Presentation */,
+				DCAD92422236154900EC1B01 /* ThreadOperations */,
 				DC0193C922348D5100DC8E50 /* helpers */,
 				DC0193BE2234890600DC8E50 /* mocks */,
 			);
@@ -267,7 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0193B42234862200DC8E50 /* StoryboardLoader.swift */,
-				DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */,
+				DCAD92432236188100EC1B01 /* ThreadOperations */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -343,6 +351,24 @@
 				DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */,
 			);
 			path = TextTransform;
+			sourceTree = "<group>";
+		};
+		DCAD92422236154900EC1B01 /* ThreadOperations */ = {
+			isa = PBXGroup;
+			children = (
+				DCAD9247223618D600EC1B01 /* GlobalThreadOperationTests.swift */,
+				DCAD923A223614F800EC1B01 /* MainThreadOperationTests.swift */,
+			);
+			path = ThreadOperations;
+			sourceTree = "<group>";
+		};
+		DCAD92432236188100EC1B01 /* ThreadOperations */ = {
+			isa = PBXGroup;
+			children = (
+				DCAD92442236189500EC1B01 /* GlobalThreadOperation.swift */,
+				DC4CA9A62235BEC400D9E9A3 /* MainThreadOperation.swift */,
+			);
+			path = ThreadOperations;
 			sourceTree = "<group>";
 		};
 		DCAF2F982235DDB800FE2BDB /* JavaScript */ = {
@@ -528,8 +554,9 @@
 				DC0193EC2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */,
 				DC4CA990223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */,
 				DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */,
+				DCAD92452236189500EC1B01 /* GlobalThreadOperation.swift in Sources */,
 				DC01936F22347BC500DC8E50 /* EditorViewController.swift in Sources */,
-				DC4CA9A72235BEC400D9E9A3 /* ThreadOperations.swift in Sources */,
+				DC4CA9A72235BEC400D9E9A3 /* MainThreadOperation.swift in Sources */,
 				DCAF2F962235DD9700FE2BDB /* TextTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,9 +567,12 @@
 			files = (
 				DC0193ED2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */,
 				DCAF2F972235DD9700FE2BDB /* TextTransform.swift in Sources */,
+				DCAD92462236189500EC1B01 /* GlobalThreadOperation.swift in Sources */,
 				DC4CA99D2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift in Sources */,
 				DCAF2F9E2235FA4200FE2BDB /* GuardNumberTextTests.swift in Sources */,
 				DC0193D722349FAC00DC8E50 /* SpyAnchor.swift in Sources */,
+				DCAD9248223618D600EC1B01 /* GlobalThreadOperationTests.swift in Sources */,
+				DCAD923B223614F800EC1B01 /* MainThreadOperationTests.swift in Sources */,
 				DC01937422347C4900DC8E50 /* EditorViewControllerTests.swift in Sources */,
 				DCAF2F892235D89F00FE2BDB /* AppDelegate.swift in Sources */,
 				DC01937022347BC500DC8E50 /* EditorViewController.swift in Sources */,
@@ -551,7 +581,7 @@
 				DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */,
 				DC0193CB22348F0400DC8E50 /* MockError.swift in Sources */,
 				DC0193C02234893600DC8E50 /* StubLoopSegment.swift in Sources */,
-				DC4CA9AF2235D0D200D9E9A3 /* ThreadOperations.swift in Sources */,
+				DC4CA9AF2235D0D200D9E9A3 /* MainThreadOperation.swift in Sources */,
 				DCAF2F9F2235FAD200FE2BDB /* GuardNumberText.swift in Sources */,
 				DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */,
 				DCAF2F882235D89900FE2BDB /* AppDelegateTests.swift in Sources */,
