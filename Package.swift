@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "QLoop-Demo",
     dependencies: [
-        .package(url: "https://github.com/quickthyme/qloop.git", from: "0.0.4"),
+        .package(url: "https://github.com/quickthyme/qloop.git", from: "0.0.5"),
     ],
     targets: [
         .target(name: "QLoop-Demo", dependencies: ["QLoop"]),
