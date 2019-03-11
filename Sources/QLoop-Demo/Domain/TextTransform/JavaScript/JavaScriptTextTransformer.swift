@@ -1,6 +1,4 @@
 
-typealias TextTransform = ( ((String?), (String?) -> ()) throws ->() )
-
 struct JavaScriptTextTransformer {
     let id: String = "js parser"
 
@@ -8,7 +6,7 @@ struct JavaScriptTextTransformer {
         return ({ input, completion in
             let parser = JavaScriptParser()
             let result: String =
-                try parser.parseString(javaScript: input ?? "")
+                parser.parseString(javaScript: input ?? "")
             completion(result)
         })
     }

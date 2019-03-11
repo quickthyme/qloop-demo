@@ -34,6 +34,11 @@
 		DC4CA9AF2235D0D200D9E9A3 /* ThreadOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */; };
 		DCAF2F882235D89900FE2BDB /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF2F872235D86000FE2BDB /* AppDelegateTests.swift */; };
 		DCAF2F892235D89F00FE2BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC019347223478D300DC8E50 /* AppDelegate.swift */; };
+		DCAF2F942235DD5800FE2BDB /* GuardNumberText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF2F932235DD5800FE2BDB /* GuardNumberText.swift */; };
+		DCAF2F962235DD9700FE2BDB /* TextTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF2F952235DD9700FE2BDB /* TextTransform.swift */; };
+		DCAF2F972235DD9700FE2BDB /* TextTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF2F952235DD9700FE2BDB /* TextTransform.swift */; };
+		DCAF2F9E2235FA4200FE2BDB /* GuardNumberTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF2F9C2235FA4200FE2BDB /* GuardNumberTextTests.swift */; };
+		DCAF2F9F2235FAD200FE2BDB /* GuardNumberText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF2F932235DD5800FE2BDB /* GuardNumberText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +131,9 @@
 		DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptTextTransformTests.swift; sourceTree = "<group>"; };
 		DC4CA9A62235BEC400D9E9A3 /* ThreadOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadOperations.swift; sourceTree = "<group>"; };
 		DCAF2F872235D86000FE2BDB /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		DCAF2F932235DD5800FE2BDB /* GuardNumberText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardNumberText.swift; sourceTree = "<group>"; };
+		DCAF2F952235DD9700FE2BDB /* TextTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTransform.swift; sourceTree = "<group>"; };
+		DCAF2F9C2235FA4200FE2BDB /* GuardNumberTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardNumberTextTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,8 +321,9 @@
 		DC4CA995223583FD00D9E9A3 /* TextTransform */ = {
 			isa = PBXGroup;
 			children = (
-				DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */,
-				DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */,
+				DCAF2F952235DD9700FE2BDB /* TextTransform.swift */,
+				DCAF2F992235DDC800FE2BDB /* GuardnumberText */,
+				DCAF2F982235DDB800FE2BDB /* JavaScript */,
 			);
 			path = TextTransform;
 			sourceTree = "<group>";
@@ -330,9 +339,27 @@
 		DC4CA99A2235870300D9E9A3 /* TextTransform */ = {
 			isa = PBXGroup;
 			children = (
+				DCAF2F9C2235FA4200FE2BDB /* GuardNumberTextTests.swift */,
 				DC4CA99B2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift */,
 			);
 			path = TextTransform;
+			sourceTree = "<group>";
+		};
+		DCAF2F982235DDB800FE2BDB /* JavaScript */ = {
+			isa = PBXGroup;
+			children = (
+				DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */,
+				DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */,
+			);
+			path = JavaScript;
+			sourceTree = "<group>";
+		};
+		DCAF2F992235DDC800FE2BDB /* GuardnumberText */ = {
+			isa = PBXGroup;
+			children = (
+				DCAF2F932235DD5800FE2BDB /* GuardNumberText.swift */,
+			);
+			path = GuardnumberText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,12 +523,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAF2F942235DD5800FE2BDB /* GuardNumberText.swift in Sources */,
 				DC019348223478D300DC8E50 /* AppDelegate.swift in Sources */,
 				DC0193EC2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */,
 				DC4CA990223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */,
 				DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */,
 				DC01936F22347BC500DC8E50 /* EditorViewController.swift in Sources */,
 				DC4CA9A72235BEC400D9E9A3 /* ThreadOperations.swift in Sources */,
+				DCAF2F962235DD9700FE2BDB /* TextTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +539,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0193ED2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */,
+				DCAF2F972235DD9700FE2BDB /* TextTransform.swift in Sources */,
 				DC4CA99D2235871F00D9E9A3 /* JavaScriptTextTransformTests.swift in Sources */,
+				DCAF2F9E2235FA4200FE2BDB /* GuardNumberTextTests.swift in Sources */,
 				DC0193D722349FAC00DC8E50 /* SpyAnchor.swift in Sources */,
 				DC01937422347C4900DC8E50 /* EditorViewControllerTests.swift in Sources */,
 				DCAF2F892235D89F00FE2BDB /* AppDelegate.swift in Sources */,
@@ -521,6 +552,7 @@
 				DC0193CB22348F0400DC8E50 /* MockError.swift in Sources */,
 				DC0193C02234893600DC8E50 /* StubLoopSegment.swift in Sources */,
 				DC4CA9AF2235D0D200D9E9A3 /* ThreadOperations.swift in Sources */,
+				DCAF2F9F2235FAD200FE2BDB /* GuardNumberText.swift in Sources */,
 				DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */,
 				DCAF2F882235D89900FE2BDB /* AppDelegateTests.swift in Sources */,
 			);
