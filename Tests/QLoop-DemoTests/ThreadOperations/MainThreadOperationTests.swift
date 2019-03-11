@@ -27,7 +27,7 @@ class MainThreadOperatorTests: XCTestCase {
 
         subject.op(1, completion)
 
-        wait(for: [expectMainThread], timeout: 1.0)
+        wait(for: [expectMainThread], timeout: 3.0)
         XCTAssertNotNil(thread)
         XCTAssertTrue(thread?.isMainThread ?? false)
     }
@@ -43,7 +43,7 @@ class MainThreadOperatorTests: XCTestCase {
 
         subject.err(MockError(), completion, errCompletion)
 
-        wait(for: [expectMainThread], timeout: 1.0)
+        wait(for: [expectMainThread], timeout: 3.0)
         XCTAssertNotNil(thread)
         XCTAssertTrue(thread?.isMainThread ?? false)
     }

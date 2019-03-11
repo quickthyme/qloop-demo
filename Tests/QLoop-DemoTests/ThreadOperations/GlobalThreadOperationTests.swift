@@ -27,7 +27,7 @@ class GlobalThreadOperationTests: XCTestCase {
 
         subject.op(1, completion)
 
-        wait(for: [expectBackgroundThread], timeout: 1.0)
+        wait(for: [expectBackgroundThread], timeout: 3.0)
         XCTAssertNotNil(thread)
         XCTAssertFalse(thread?.isMainThread ?? false)
     }
@@ -43,7 +43,7 @@ class GlobalThreadOperationTests: XCTestCase {
 
         subject.err(MockError(), completion, errCompletion)
 
-        wait(for: [expectBackgroundThread], timeout: 1.0)
+        wait(for: [expectBackgroundThread], timeout: 3.0)
         XCTAssertNotNil(thread)
         XCTAssertFalse(thread?.isMainThread ?? false)
     }
