@@ -32,13 +32,6 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DC019343223478D200DC8E50"
-            BuildableName = "QLoop-Demo.app"
-            BlueprintName = "QLoop-Demo"
-            ReferencedContainer = "container:QLoop-Demo.xcodeproj">
-         </BuildableReference>
-         <BuildableReference
-            BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC019357223478D300DC8E50"
             BuildableName = "QLoop-DemoTests.xctest"
             BlueprintName = "QLoop-DemoTests"

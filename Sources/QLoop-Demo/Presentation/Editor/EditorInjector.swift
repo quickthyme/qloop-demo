@@ -15,14 +15,16 @@ class EditorInjector: NSObject {
     var textTransformPath: QLoopPath<String, String> {
         let bgThread = GlobalThreadOperation<String>(.background)
         let jsonParse = JavaScriptTextTransformer()
-        let mainThread = MainThreadOperation<String>()
         let guardNumber = GuardNumberText()
+        let mainThread = MainThreadOperation<String>()
 
         return QLoopPath<String, String>(
-            QLoopLinearSegment(bgThread.id, bgThread.op),
+            QLoopLinearSegment(bgThread.id, bgThread.op,
+                               errorHandler: bgThread.err),
             QLoopLinearSegment(jsonParse.id, jsonParse.op),
-            QLoopLinearSegment(mainThread.id, mainThread.op),
-            QLoopLinearSegment(guardNumber.id, guardNumber.op)
+            QLoopLinearSegment(guardNumber.id, guardNumber.op),
+            QLoopLinearSegment(mainThread.id, mainThread.op,
+                               errorHandler: mainThread.err)
         )!
     }
 }
