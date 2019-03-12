@@ -7,14 +7,19 @@ class EditorViewControllerTests: XCTestCase {
 
     override func setUp() {
         subject = (StoryboardLoader.loadViewController(from: "Editor") as! EditorViewController)
-        subject.runActionLoop.bind(path: StubLoopPath())
+        subject.parseTextActionLoop.bind(path: StubLoopPath())
         let _ = subject.view
     }
 
-    func test_has_correct_runActionLoop_configuration() {
+    func test_has_correct_parseTextActionLoop_configuration() {
         let subject: EditorViewController = (StoryboardLoader.loadViewController(from: "Editor") as! EditorViewController)
         let _ = subject.view
-        XCTAssertEqual(subject.runActionLoop.findSegments(with: "js parser").count, 1)
+        let opPath = subject.parseTextActionLoop.describeOperationPath()
+        XCTAssertEqual(opPath,
+                       "{global_qos_thread_background}"
+                        + "-{js parser}"
+                        + "-{guard number text}"
+                        + "-{main_thread}")
     }
 
     func test_outlets_connected() {
@@ -27,17 +32,17 @@ class EditorViewControllerTests: XCTestCase {
     func test_run_action_performs_loop_with_input_text_view_text() {
         subject.inputTextView.text = "hello"
         subject.runAction(nil)
-        XCTAssertEqual(subject.runActionLoop.inputAnchor.input, "hello")
+        XCTAssertEqual(subject.parseTextActionLoop.inputAnchor.input, "hello")
     }
 
-    func test_runActionLoop_returns_with_output_it_should_display_it_using_white_text_color() {
-        subject.runActionLoop.outputAnchor.input = "SUCCESS"
+    func test_parseTextActionLoop_returns_with_output_it_should_display_it_using_white_text_color() {
+        subject.parseTextActionLoop.outputAnchor.input = "SUCCESS"
         XCTAssertEqual(subject.outputTextView.text, "SUCCESS")
         XCTAssertEqual(subject.outputTextView.textColor, UIColor.white)
     }
 
-    func test_runActionLoop_returns_with_error_it_should_display_it_using_red_text_color() {
-        subject.runActionLoop.outputAnchor.error = MockError()
+    func test_parseTextActionLoop_returns_with_error_it_should_display_it_using_red_text_color() {
+        subject.parseTextActionLoop.outputAnchor.error = MockError()
         XCTAssertEqual(subject.outputTextView.text, "MockError()")
         XCTAssertEqual(subject.outputTextView.textColor, UIColor.red)
     }

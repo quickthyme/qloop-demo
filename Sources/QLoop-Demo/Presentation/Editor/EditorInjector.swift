@@ -8,7 +8,7 @@ class EditorInjector: NSObject {
     override func awakeFromNib() {
         super.awakeFromNib()
         editorViewController
-            .runActionLoop
+            .parseTextActionLoop
             .bind(path: textTransformPath )
     }
 
@@ -19,8 +19,7 @@ class EditorInjector: NSObject {
         let mainThread = MainThreadOperation<String>()
 
         return QLoopPath<String, String>(
-            QLoopLinearSegment(bgThread.id, bgThread.op,
-                               errorHandler: bgThread.err),
+            QLoopLinearSegment(bgThread.id, bgThread.op),
             QLoopLinearSegment(jsonParse.id, jsonParse.op),
             QLoopLinearSegment(guardNumber.id, guardNumber.op),
             QLoopLinearSegment(mainThread.id, mainThread.op,

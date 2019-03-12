@@ -9,10 +9,10 @@ class EditorViewController: UIViewController {
     @IBOutlet weak var runButton: UIButton!
 
     @IBAction func runAction(_ sender: AnyObject?) {
-        runActionLoop.perform(inputTextView.text)
+        parseTextActionLoop.perform(inputTextView.text)
     }
 
-    lazy var runActionLoop = QLoop<String, String>(
+    lazy var parseTextActionLoop = QLoop<String, String>(
         iterator: QLoopIteratorSingle(),
 
         onChange: ({ text in
