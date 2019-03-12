@@ -19,7 +19,7 @@ class EditorViewControllerTests: XCTestCase {
                        "{global_qos_thread_background}"
                         + "-{js parser}"
                         + "-{guard number text}"
-                        + "-{main_thread}")
+                        + "-{main_thread*}")
     }
 
     func test_outlets_connected() {
