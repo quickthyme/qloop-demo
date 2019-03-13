@@ -330,7 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				DCAF2F952235DD9700FE2BDB /* TextTransform.swift */,
-				DCAF2F992235DDC800FE2BDB /* GuardnumberText */,
+				DCAF2F992235DDC800FE2BDB /* GuardNumberText */,
 				DCAF2F982235DDB800FE2BDB /* JavaScript */,
 			);
 			path = TextTransform;
@@ -380,12 +380,12 @@
 			path = JavaScript;
 			sourceTree = "<group>";
 		};
-		DCAF2F992235DDC800FE2BDB /* GuardnumberText */ = {
+		DCAF2F992235DDC800FE2BDB /* GuardNumberText */ = {
 			isa = PBXGroup;
 			children = (
 				DCAF2F932235DD5800FE2BDB /* GuardNumberText.swift */,
 			);
-			path = GuardnumberText;
+			path = GuardNumberText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
