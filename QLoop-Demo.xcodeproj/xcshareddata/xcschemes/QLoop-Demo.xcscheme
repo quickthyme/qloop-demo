@@ -20,6 +20,20 @@
                ReferencedContainer = "container:QLoop-Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC6FAF00222F41DD008BB070"
+               BuildableName = "QLoop-iOSTests.xctest"
+               BlueprintName = "QLoop-iOSTests"
+               ReferencedContainer = "container:submodule/qloop/QLoop.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -37,16 +51,35 @@
             BlueprintName = "QLoop-DemoTests"
             ReferencedContainer = "container:QLoop-Demo.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DC6FAF00222F41DD008BB070"
+            BuildableName = "QLoop-iOSTests.xctest"
+            BlueprintName = "QLoop-iOSTests"
+            ReferencedContainer = "container:submodule/qloop/QLoop.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC019357223478D300DC8E50"
                BuildableName = "QLoop-DemoTests.xctest"
                BlueprintName = "QLoop-DemoTests"
                ReferencedContainer = "container:QLoop-Demo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC6FAF00222F41DD008BB070"
+               BuildableName = "QLoop-iOSTests.xctest"
+               BlueprintName = "QLoop-iOSTests"
+               ReferencedContainer = "container:submodule/qloop/QLoop.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

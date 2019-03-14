@@ -16,7 +16,7 @@ class EditorViewControllerTests: XCTestCase {
         let _ = subject.view
         let opPath = subject.parseTextActionLoop.describeOperationPath()
         XCTAssertEqual(opPath,
-                       "{global_qos_thread_background}"
+                       "{global_qos_thread_background*}"
                         + "-{js parser}"
                         + "-{guard number text}"
                         + "-{main_thread*}")
