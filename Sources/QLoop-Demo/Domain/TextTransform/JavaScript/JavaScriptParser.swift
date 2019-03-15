@@ -15,10 +15,4 @@ class JavaScriptParser {
         let parseFunc = context.objectForKeyedSubscript("parseFunc")!
         return parseFunc.call(withArguments: [])?.toString() ?? ""
     }
-
-    struct ParseError: Error {
-        var msg: String
-        var localizedDescription: String { return msg }
-        init(_ msg: String) { self.msg = msg }
-    }
 }

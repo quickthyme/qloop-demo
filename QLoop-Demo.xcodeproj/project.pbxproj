@@ -175,10 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				DC019353223478D300DC8E50 /* Info.plist */,
+				DC01936B22347AC800DC8E50 /* Launch.storyboard */,
 				DC01934E223478D300DC8E50 /* Assets.xcassets */,
 				DC4CA994223583ED00D9E9A3 /* Domain */,
 				DC4CA9922235838000D9E9A3 /* Presentation */,
-				DC0193B32234860600DC8E50 /* helpers */,
 			);
 			path = "QLoop-Demo";
 			sourceTree = "<group>";
@@ -258,14 +258,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DC0193B32234860600DC8E50 /* helpers */ = {
-			isa = PBXGroup;
-			children = (
-				DC0193B42234862200DC8E50 /* StoryboardLoader.swift */,
-			);
-			path = helpers;
-			sourceTree = "<group>";
-		};
 		DC0193BE2234890600DC8E50 /* mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */,
+				DC0193B42234862200DC8E50 /* StoryboardLoader.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -287,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				DC019347223478D300DC8E50 /* AppDelegate.swift */,
-				DC01936B22347AC800DC8E50 /* Launch.storyboard */,
 				DC0193BA223486B700DC8E50 /* Root.storyboard */,
 				DC01936D22347B8F00DC8E50 /* Editor */,
 			);

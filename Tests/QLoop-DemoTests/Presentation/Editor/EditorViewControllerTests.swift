@@ -16,7 +16,7 @@ class EditorViewControllerTests: XCTestCase {
         let _ = subject.view
         let opPath = subject.parseTextActionLoop.describeOperationPath()
         XCTAssertEqual(opPath,
-                       "{global_qos_thread_background*}"
+                       "{global_qos_thread_background}"
                         + "-{js parser}"
                         + "-{guard number text}"
                         + "-{main_thread*}")
@@ -32,11 +32,11 @@ class EditorViewControllerTests: XCTestCase {
     func test_run_action_performs_loop_with_input_text_view_text() {
         subject.inputTextView.text = "hello"
         subject.runAction(nil)
-        XCTAssertEqual(subject.parseTextActionLoop.inputAnchor.input, "hello")
+        XCTAssertEqual(subject.parseTextActionLoop.inputAnchor.value, "hello")
     }
 
     func test_parseTextActionLoop_returns_with_output_it_should_display_it_using_white_text_color() {
-        subject.parseTextActionLoop.outputAnchor.input = "SUCCESS"
+        subject.parseTextActionLoop.outputAnchor.value = "SUCCESS"
         XCTAssertEqual(subject.outputTextView.text, "SUCCESS")
         XCTAssertEqual(subject.outputTextView.textColor, UIColor.white)
     }
