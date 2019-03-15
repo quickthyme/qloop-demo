@@ -7,7 +7,7 @@ class EditorViewControllerTests: XCTestCase {
 
     override func setUp() {
         subject = (StoryboardLoader.loadViewController(from: "Editor") as! EditorViewController)
-        subject.parseTextActionLoop.bind(path: StubLoopPath())
+        subject.parseTextActionLoop.destroy()
         let _ = subject.view
     }
 
@@ -42,8 +42,8 @@ class EditorViewControllerTests: XCTestCase {
     }
 
     func test_parseTextActionLoop_returns_with_error_it_should_display_it_using_red_text_color() {
-        subject.parseTextActionLoop.outputAnchor.error = MockError()
-        XCTAssertEqual(subject.outputTextView.text, "MockError()")
+        subject.parseTextActionLoop.outputAnchor.error = DummyError()
+        XCTAssertEqual(subject.outputTextView.text, "DummyError()")
         XCTAssertEqual(subject.outputTextView.textColor, UIColor.red)
     }
 }

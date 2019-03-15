@@ -1,0 +1,2 @@
+
+struct DummyError: Error {}
