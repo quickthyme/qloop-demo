@@ -7,14 +7,14 @@ class EditorViewControllerTests: XCTestCase {
 
     override func setUp() {
         subject = (StoryboardLoader.loadViewController(from: "Editor") as! EditorViewController)
-        subject.parseTextActionLoop.destroy()
+        subject.processTextActionLoop.destroy()
         let _ = subject.view
     }
 
     func test_has_correct_parseTextActionLoop_configuration() {
         let subject: EditorViewController = (StoryboardLoader.loadViewController(from: "Editor") as! EditorViewController)
         let _ = subject.view
-        let opPath = subject.parseTextActionLoop.describeOperationPath()
+        let opPath = subject.processTextActionLoop.describeOperationPath()
         XCTAssertEqual(opPath,
                        "{global_qos_thread_background}"
                         + "-{js parser}"
@@ -29,20 +29,20 @@ class EditorViewControllerTests: XCTestCase {
         XCTAssertNotNil(subject.runButton.actions(forTarget: subject, forControlEvent: .touchUpInside))
     }
 
-    func test_run_action_performs_loop_with_input_text_view_text() {
+    func test_process_action_performs_loop_with_input_text_view_text() {
         subject.inputTextView.text = "hello"
-        subject.runAction(nil)
-        XCTAssertEqual(subject.parseTextActionLoop.inputAnchor.value, "hello")
+        subject.processAction(nil)
+        XCTAssertEqual(subject.processTextActionLoop.input.value, "hello")
     }
 
-    func test_parseTextActionLoop_returns_with_output_it_should_display_it_using_white_text_color() {
-        subject.parseTextActionLoop.outputAnchor.value = "SUCCESS"
+    func test_processTextActionLoop_returns_with_output_it_should_display_it_using_green_text_color() {
+        subject.processTextActionLoop.output.value = "SUCCESS"
         XCTAssertEqual(subject.outputTextView.text, "SUCCESS")
-        XCTAssertEqual(subject.outputTextView.textColor, UIColor.white)
+        XCTAssertEqual(subject.outputTextView.textColor, UIColor.green)
     }
 
-    func test_parseTextActionLoop_returns_with_error_it_should_display_it_using_red_text_color() {
-        subject.parseTextActionLoop.outputAnchor.error = DummyError()
+    func test_processTextActionLoop_returns_with_error_it_should_display_it_using_red_text_color() {
+        subject.processTextActionLoop.output.error = DummyError()
         XCTAssertEqual(subject.outputTextView.text, "DummyError()")
         XCTAssertEqual(subject.outputTextView.textColor, UIColor.red)
     }

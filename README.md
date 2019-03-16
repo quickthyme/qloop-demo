@@ -40,23 +40,17 @@ import it.
 - This is a very important aspect to QLoop's design, and why you should not
 attempt to create subclasses of loops, segments, or anchors. Instead, you
 should try and implement your operations generically, independent of each
-other and *especially* of any frameworks. Then have your `injector` or `delegate`
-compositionally attach the operations to loop segments when creating a path.
+other. Then have your `injector` or `delegate` compositionally attach the
+operations to loop segments when creating a path.
 
-- The separation of the loop from its path is also important to note here. One of
-QLoop's testing strengths stems from this feature, as it serves not only as a
-means to conveniently offload business logic away from the view, (without
-having to build other classes for the sake of it), but it also provides its own
+- The separation of the loop from its path is important to note here. One of
+QLoop's testing strengths stems from this feature, as it provides its own
 sort of "natural" mocking mechanism. Because we use observer pattern here, we
 can safely assign values to the inactive loop anchors, (without having to make
 asynchronous calls), and then just verify the reactions.
 
-- One exception regarding the subclassing rule is that you *can*, in fact,
-create custom instances of `QLoopPath`, although you *cannot* override any of
-its default methods. The only practical situations in which you might/should
-consider subclassing paths, is for whenever you might want to use type-checking
-on a pre-constructed series of operation segments.
-
+- After loading the view from the storyboard in the test, we call `destroy()`
+in order to return it to its natural state by removing all bound path segments.
 
 <br />
 

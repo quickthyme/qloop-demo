@@ -8,15 +8,15 @@ class EditorViewController: UIViewController {
     @IBOutlet weak var outputTextView: UITextView!
     @IBOutlet weak var runButton: UIButton!
 
-    @IBAction func runAction(_ sender: AnyObject?) {
-        parseTextActionLoop.perform(inputTextView.text)
+    @IBAction func processAction(_ sender: AnyObject?) {
+        processTextActionLoop.perform(inputTextView.text)
     }
 
-    lazy var parseTextActionLoop = QLoop<String, String>(
+    lazy var processTextActionLoop = QLoop<String, String>(
         iterator: QLoopIteratorSingle(),
 
         onChange: ({ text in
-            self.outputTextView.textColor = UIColor.white
+            self.outputTextView.textColor = UIColor.green
             self.outputTextView.text = text
         }),
 

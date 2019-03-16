@@ -44,11 +44,11 @@ return x * x;</string>
                                     <constraint firstAttribute="width" constant="170" id="d6r-xc-zZp"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Run">
+                                <state key="normal" title="Process">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="runAction:" destination="Vz8-ix-iyL" eventType="touchUpInside" id="mm5-dN-K06"/>
+                                    <action selector="processAction:" destination="Vz8-ix-iyL" eventType="touchUpInside" id="1KX-cD-pvf"/>
                                 </connections>
                             </button>
                         </subviews>
