@@ -77,7 +77,7 @@ return x * x;</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJt-UH-FwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="NRd-RW-cJN" userLabel="Injector" customClass="EditorInjector" customModule="QLoop_Demo" customModuleProvider="target">
+                <customObject id="NRd-RW-cJN" userLabel="Binder" customClass="EditorBinder" customModule="QLoop_Demo" customModuleProvider="target">
                     <connections>
                         <outlet property="editorViewController" destination="Vz8-ix-iyL" id="m24-Ih-65l"/>
                     </connections>

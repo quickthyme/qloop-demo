@@ -15,11 +15,7 @@ class EditorViewControllerTests: XCTestCase {
         let subject: EditorViewController = (StoryboardLoader.loadViewController(from: "Editor") as! EditorViewController)
         let _ = subject.view
         let opPath = subject.processTextActionLoop.describeOperationPath()
-        XCTAssertEqual(opPath,
-                       "{global_qos_thread_background}"
-                        + "-{js parser}"
-                        + "-{guard number text}"
-                        + "-{main_thread*}")
+        XCTAssertEqual(opPath, "{js parser}-{guard number text}")
     }
 
     func test_outlets_connected() {
@@ -36,13 +32,13 @@ class EditorViewControllerTests: XCTestCase {
     }
 
     func test_processTextActionLoop_returns_with_output_it_should_display_it_using_green_text_color() {
-        subject.processTextActionLoop.output.value = "SUCCESS"
+        subject.processTextActionLoop.onChange("SUCCESS")
         XCTAssertEqual(subject.outputTextView.text, "SUCCESS")
         XCTAssertEqual(subject.outputTextView.textColor, UIColor.green)
     }
 
     func test_processTextActionLoop_returns_with_error_it_should_display_it_using_red_text_color() {
-        subject.processTextActionLoop.output.error = DummyError()
+        subject.processTextActionLoop.output.onError(DummyError())
         XCTAssertEqual(subject.outputTextView.text, "DummyError()")
         XCTAssertEqual(subject.outputTextView.textColor, UIColor.red)
     }

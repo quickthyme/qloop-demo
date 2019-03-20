@@ -3,19 +3,24 @@ import QLoop
 import Dispatch
 
 struct EditorBehaviors {
+    static var PerformNumericCalculation: QLPath<String, String> {
+        return QLPath(
+            ParseJsonText(),
+            EnsureNumericResult())!
+    }
+}
 
-    static var PerformNumericCalculationThenOutputResults: QLPath<String, String> {
+fileprivate extension EditorBehaviors {
 
-        let switchToBkgOp = QLCommon.Op.DispatchGlobal<String>(.background)
-        let parseJsonText = JavaScriptTextTransformer()
-        let ensureNumeric = GuardNumberText()
-        let returnToMain  = QLCommon.Op.DispatchMain<String>()
+    static func ParseJsonText() -> QLSerialSegment<String, String> {
+        let parseJsonTextOp = JavaScriptTextTransformer()
+        let parseJsonTextSeg = QLss(parseJsonTextOp.id, parseJsonTextOp.op)
+        parseJsonTextSeg.operationQueue = DispatchQueue.global(qos: .background)
+        return parseJsonTextSeg
+    }
 
-        return QLPath<String, String>(
-            QLss(switchToBkgOp.id, switchToBkgOp.op),
-            QLss(parseJsonText.id, parseJsonText.op),
-            QLss(ensureNumeric.id, ensureNumeric.op),
-            QLss(returnToMain.id,  returnToMain.op,
-                 errorHandler: returnToMain.err))!
+    static func EnsureNumericResult() -> QLSerialSegment<String, String> {
+        let ensureNumericOp = GuardNumberText()
+        return QLss(ensureNumericOp.id, ensureNumericOp.op)
     }
 }

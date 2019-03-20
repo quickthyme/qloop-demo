@@ -1,13 +1,12 @@
 
 import UIKit
-import QLoop
 
-class EditorInjector: NSObject {
+class EditorBinder: NSObject {
     @IBOutlet weak var editorViewController: EditorViewController!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         editorViewController.processTextActionLoop
-            .bind(path: EditorBehaviors.PerformNumericCalculationThenOutputResults)
+            .bind(path: EditorBehaviors.PerformNumericCalculation)
     }
 }

@@ -20,8 +20,8 @@
 		DC0193BB223486B700DC8E50 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0193BA223486B700DC8E50 /* Root.storyboard */; };
 		DC0193C522348BA800DC8E50 /* libQLoop-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0193872234836000DC8E50 /* libQLoop-iOS.a */; };
 		DC0193CB22348F0400DC8E50 /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CA22348F0400DC8E50 /* DummyError.swift */; };
-		DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorInjector.swift */; };
-		DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorInjector.swift */; };
+		DC0193D02234921B00DC8E50 /* EditorBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorBinder.swift */; };
+		DC0193D12234921B00DC8E50 /* EditorBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193CF2234921B00DC8E50 /* EditorBinder.swift */; };
 		DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */; };
 		DC0193EC2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */; };
 		DC0193ED2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */; };
@@ -122,7 +122,7 @@
 		DC0193B42234862200DC8E50 /* StoryboardLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoader.swift; sourceTree = "<group>"; };
 		DC0193BA223486B700DC8E50 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		DC0193CA22348F0400DC8E50 /* DummyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyError.swift; sourceTree = "<group>"; };
-		DC0193CF2234921B00DC8E50 /* EditorInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorInjector.swift; sourceTree = "<group>"; };
+		DC0193CF2234921B00DC8E50 /* EditorBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorBinder.swift; sourceTree = "<group>"; };
 		DC0193D822349FD600DC8E50 /* CapturedCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturedCompletion.swift; sourceTree = "<group>"; };
 		DC0193EB2234ECC000DC8E50 /* JavaScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptParser.swift; sourceTree = "<group>"; };
 		DC4CA98F223582EC00D9E9A3 /* JavaScriptTextTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptTextTransformer.swift; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 			children = (
 				DC01937522347CA500DC8E50 /* Editor.storyboard */,
 				DCAB9A1E223CA02500BE25F0 /* EditorBehaviors.swift */,
-				DC0193CF2234921B00DC8E50 /* EditorInjector.swift */,
+				DC0193CF2234921B00DC8E50 /* EditorBinder.swift */,
 				DC01936E22347BC500DC8E50 /* EditorViewController.swift */,
 			);
 			path = Editor;
@@ -522,7 +522,7 @@
 				DCAB9A1F223CA02500BE25F0 /* EditorBehaviors.swift in Sources */,
 				DC0193EC2234ECC000DC8E50 /* JavaScriptParser.swift in Sources */,
 				DC4CA990223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */,
-				DC0193D02234921B00DC8E50 /* EditorInjector.swift in Sources */,
+				DC0193D02234921B00DC8E50 /* EditorBinder.swift in Sources */,
 				DC01936F22347BC500DC8E50 /* EditorViewController.swift in Sources */,
 				DCAF2F962235DD9700FE2BDB /* TextTransform.swift in Sources */,
 			);
@@ -542,7 +542,7 @@
 				DCAB9A20223CA02500BE25F0 /* EditorBehaviors.swift in Sources */,
 				DC0193B82234865800DC8E50 /* StoryboardLoader.swift in Sources */,
 				DC4CA991223582EC00D9E9A3 /* JavaScriptTextTransformer.swift in Sources */,
-				DC0193D12234921B00DC8E50 /* EditorInjector.swift in Sources */,
+				DC0193D12234921B00DC8E50 /* EditorBinder.swift in Sources */,
 				DC0193CB22348F0400DC8E50 /* DummyError.swift in Sources */,
 				DCAF2F9F2235FAD200FE2BDB /* GuardNumberText.swift in Sources */,
 				DC0193D922349FD600DC8E50 /* CapturedCompletion.swift in Sources */,
