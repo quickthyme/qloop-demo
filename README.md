@@ -11,8 +11,8 @@ declarative composition.
 
   - observer pattern and reactive rendering
   - declarative chaining of asynchronous operations
-  - basic dependency injection using InterfaceBuilder
-  - managing background threads
+  - basic dependency injection (binding) using InterfaceBuilder
+  - utilizing background threads
   - handling errors
   - unit-testing solutions
 
@@ -32,25 +32,25 @@ git submodule update --init
 
 #### Of particular interest
 
-- You might notice that none of the application entities have any sort of
-"hard" dependency on QLoop. Only those objects to which any loop construct
-is bound (e.g. the view controller, its injector, and its tests) need to
-import it.
+- The view controller in this example is using an observer pattern. Here, we've placed
+an empty loop in the view and added just the code that renders/updates the view whenever
+input is received through either the `onChange(_:)` and/or `onError(_:)` events.
 
-- This is a very important aspect to QLoop's design, and why you should not
-attempt to create subclasses of loops, segments, or anchors. Instead, you
-should try and implement your operations generically, independent of each
-other. Then have your `injector` or `delegate` compositionally attach the
-operations to loop segments when creating a path.
+- You are not limited to using only one loop in this manner. An entity can have as many
+loops as it needs for a variety of purposes.
 
-- The separation of the loop from its path is important to note here. One of
-QLoop's testing strengths stems from this feature, as it provides its own
-sort of "natural" mocking mechanism. Because we use observer pattern here, we
-can safely assign values to the inactive loop anchors, (without having to make
-asynchronous calls), and then just verify the reactions.
+- You should not attempt to create subclasses of loops, segments, or anchors.
+Instead, you should try and implement your operations generically, independent
+of each other. Then have your `injector`, `delegate`, `factory`, or whatever attach
+the operations to segments when they're needed.
 
-- After loading the view from the storyboard in the test, we call `destroy()`
-in order to return it to its natural state by removing all bound path segments.
+- At the start of our tests, after loading the view from the storyboard, we call
+`destroy()` in order to return the loop to its natural, empty state.
+
+- The separation of the loop from its path allows us to safely invoke its `input` and `output`
+ however we wish. We can use synchronous unit testing techniques to verify our code's
+ reactions.
+
 
 <br />
 
