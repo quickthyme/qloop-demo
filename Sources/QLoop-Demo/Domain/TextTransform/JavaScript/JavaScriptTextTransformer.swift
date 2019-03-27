@@ -9,7 +9,7 @@ struct JavaScriptTextTransformer {
     var op: TextTransform {
         return ({ input, completion in
             let parser = JavaScriptParser()
-            let result = parser.parseString(javaScript: input ?? "")
+            let result = parser.parse(input)
             completion(result)
         })
     }

@@ -4,14 +4,10 @@ import JavaScriptCore
 
 class JavaScriptParser {
 
-    let jsPrefix  = "var parseFunc = function(jsonData) {"
-    let jsPostfix = "}"
-
-    func parseString(javaScript: String) -> String {
-        guard javaScript != "", let context = JSContext() else { return "" }
-        context.evaluateScript("\(jsPrefix) \(javaScript) \(jsPostfix)")
-        return context
-            .objectForKeyedSubscript("parseFunc")
+    func parse(_ js: String?) -> String {
+        guard let js = js, (!js.isEmpty), let vm = JSContext() else { return "" }
+        vm.evaluateScript("var parf = function() { \(js) }")
+        return vm.objectForKeyedSubscript("parf")
             .call(withArguments: [])
             .toString()
     }
