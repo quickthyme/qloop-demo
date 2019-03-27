@@ -3,7 +3,7 @@ import QLoop
 
 struct EditorBehaviors {
 
-    static var PerformNumericCalculation: QLPath<String, String> {
+    static var ParseScriptAndEnsureNumericResult: QLPath<String, String> {
         return QLPath( ParseJsonText,
                        EnsureNumericResult )!
     }
