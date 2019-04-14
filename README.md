@@ -1,6 +1,6 @@
 # ![qloop](docs/icon.png) QLoop-Demo
 
-[![build status](https://travis-ci.org/quickthyme/qloop-demo.svg?branch=master)](https://travis-ci.org/quickthyme/qloop)
+[![build status](https://travis-ci.com/quickthyme/qloop-demo.svg?branch=master)](https://travis-ci.org/quickthyme/qloop)
 ![license](https://img.shields.io/github/license/quickthyme/qloop-demo.svg?color=black)
 
 Demonstration using [QLoop](https://github.com/quickthyme/qloop)
