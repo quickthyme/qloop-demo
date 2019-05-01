@@ -1,4 +1,3 @@
-
 import QLoop
 
 struct EditorBehaviors {
@@ -10,9 +9,7 @@ struct EditorBehaviors {
 
     private static var ParseJsonText: QLSerialSegment<String, String> {
         let txt = JavaScriptTextTransformer()
-        let seg = QLss(txt.id, txt.op)
-        seg.operationQueue = txt.queue
-        return seg
+        return QLss(txt.id, txt.op, operationQueue: txt.queue)
     }
 
     private static var EnsureNumericResult: QLSerialSegment<String, String> {
